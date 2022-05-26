@@ -1,0 +1,88 @@
+#rooms{
+    .container{
+        .item{
+            border: 1px solid $primery-color;
+            border-radius: 0 0 15px 15px;
+            -webkit-border-radius: 0 0 15px 15px;
+            -moz-border-radius: 0 0 15px 15px;
+            -ms-border-radius: 0 0 15px 15px;
+            -o-border-radius: 0 0 15px 15px;
+            overflow: hidden;
+
+            .rooms-slider{
+                div{
+                    height: 600px;
+                    background-position: center !important;
+                    background-size: cover !important;
+                    background-repeat: no-repeat !important;
+                }
+
+                .slick-dots{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+
+                    li{
+                        display: inline-block;
+                        margin: 0 10px;
+                        
+                        button{
+                            background: transparent;
+                            color: transparent;
+                            border: 1px solid $white;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            font-size: 10px;
+                        }
+                    }
+                    .slick-active{
+                        button{
+                            background: $white;
+                        }
+                    }
+                }
+            }
+                .overly{
+                    background: $primery-color;
+                    padding: 20px 0;
+
+                    h2{
+                        color: $white;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 26px;
+                        padding-top: 5px;
+                    }
+                }
+            
+            .dtl{
+                padding: 80px 150px;
+
+                p{
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-family: 'Adobe Garamond Pro', 'sans-serif';
+
+                    span{
+                        color: $secondery-color;
+                        padding-right: 20px;
+                    }
+                }
+
+                button{
+                    background: #e1b979;
+                    color: #fff;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}

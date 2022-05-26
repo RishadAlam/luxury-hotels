@@ -1,0 +1,52 @@
+.contact-banner{
+    .banner-cnt{
+        position: unset !important;
+        padding-top: 150px;
+        background: $primery-color;
+        padding-bottom: 130px;
+
+        .contact-b{
+            h1{
+                color: $white;
+                font-weight: 700;
+                text-align: center;
+                font-family: 'Montserrat', 'sans-serif';
+                font-size: 46px;
+            }
+        }
+    }
+}
+
+#c-form{
+    margin: 150px 0;
+
+    .d-tel{
+        p{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        a{
+            color: $primery-color;
+            @extend .trns;
+
+            &:hover{
+                color: $secondery-color;
+            }
+        }
+    }
+
+    .form{
+        label{
+            font-size: 16px;
+            font-family: 'Montserrat', 'sans-serif';
+            font-weight: 500;
+        }
+        button{
+            @extend .trns;
+            @extend .p-button;
+            &:hover{
+                background: $primery-color;
+            }
+        }
+    }
+}

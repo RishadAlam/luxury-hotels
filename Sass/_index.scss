@@ -1,0 +1,375 @@
+// Banner
+
+#banner{
+    position: relative;
+
+    .banner{                 //Banner Slider
+        .img{
+            height: 750px;
+            background-position: center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(20, 39, 72,0.5);
+            }
+        }
+    }
+
+    nav{                     //Navbar
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 9999;
+        .navbar-brand{           //Logo
+            margin: 0 !important;
+            padding: 0 !important;
+
+            .img{
+                width: 150px;
+            }
+        }
+
+        .navbar-toggler{
+            i{
+                color: $secondery-color;
+                font-size: 28px;
+            }
+        }
+
+        ul{                        //Menu
+            li{
+                margin-left: 30px;
+
+                a{
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $white;
+                    position: relative;
+                    @extend .trns;
+                }
+                &:hover a{
+                    color: $secondery-color;
+                }
+
+                .active::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                    background: $white;
+                    @extend .trns;
+                }
+                &:hover .active::after{
+                    background: $secondery-color;
+                }
+            }
+        }
+    }
+
+    .fixed-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $primery-color;
+        z-index: 99999;
+        animation-name: menu;
+        animation-duration: 1s;
+    }
+    @keyframes menu {
+        0%{
+            top: -100px;
+        }
+        100%{
+            top: 0px;
+        }
+    }
+
+    .banner-cnt{ //Banner Content
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+
+        .container{
+            height: 100%;
+
+            .row{
+                height: 100%;
+
+                .col-md-6{
+                    position: relative;
+
+                    h4{
+                        font-weight: normal;
+                        font-size: 36px;
+                        color: #FFFFFF;
+                    }
+                    h2{
+                        font-weight: bold;
+                        font-size: 88px;
+                        letter-spacing: 0.07em;
+                        color: #FFFFFF;
+                        margin-bottom: -20px;
+                    }
+                    h3{
+                        font-weight: bold;
+                        font-size: 50px;
+                        letter-spacing: 0.4em;
+                        color: #FFFFFF;
+                    }
+                    p{
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 30px;
+                        letter-spacing: 0.1em;
+                        color: #FFFFFF;
+                    }
+                    a{
+                        button{
+                            @extend .trns;
+                            @extend .p-button;
+                            position: absolute;
+                            bottom: -90px;
+                            right: -80px;
+                        }
+                        &:hover button{
+                            background: $primery-color;
+                        }
+                    }
+
+                    .scroll{
+                        position: absolute;
+                        bottom: -180px;
+                        right: -32px;
+                        cursor: pointer;
+                            animation-name: scroll !important;
+                            animation-duration: 0.6s !important;
+                            animation-iteration-count: infinite !important;
+                            animation-direction: alternate !important;
+                            animation-timing-function: ease-in-out !important;
+                        
+                        
+                        
+                        span{
+                            color: $white;
+                            font-size: 32px;
+                        }
+                    }
+                    @keyframes scroll {
+                        0%{
+                            margin-bottom: 0;
+                        }
+                        100%{
+                            margin-bottom: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Rooms
+
+#rooms{
+    .heading{
+        h2{
+            font-size: 22px;
+            text-align: center;
+            margin: 40px 0;
+            font-family: 'Montserrat', 'sans-serif';
+            color: $primery-color;
+        }
+    }
+
+    .row{
+        .item-data{
+            border-left: 2px solid rgba($color: $primery-color, $alpha: 0.5) ;
+            padding-left: 30px;
+            h2{
+                font-weight: 700;
+                font-size: 36px;
+                color: $primery-color;
+            }
+            p{
+                font-size: 18px;
+                line-height: 30px;
+                color: $primery-color;
+                margin: 20px 0;
+            }
+            a{
+                button{
+                    @extend .p-button;
+                    @extend .trns;
+                    padding: 10px 40px;
+                }
+                &:hover button{
+                    background: $primery-color;
+                }
+            }
+        }
+    }
+}
+
+// Testimonial
+
+#testimonial{
+    position: relative;
+    padding: 50px 0;
+    .testimonial{
+        h2{
+            font-weight: 700;
+            font-size: 22px;
+            color: $primery-color;
+        }
+        h4{
+            font-size: 18px;
+            line-height: 30px;
+            color: $primery-color;
+        }
+    }
+    ul{
+        li{
+            
+        position: absolute;
+        bottom: 20px;
+        transform: translate(-50px);
+        -webkit-transform: translate(-50px);
+        -moz-transform: translate(-50px);
+        -ms-transform: translate(-50px);
+        -o-transform: translate(-50px);
+            span{
+                @extend.p-button;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                
+}
+        }
+        .testimonial-prev{
+            left: 50%;
+        }
+        .testimonial-next{
+            left: 55%;
+        }
+    }
+}
+
+// Footer
+
+#footer{
+    background: $primery-color;
+    padding: 80px 0;
+    position: relative;
+    margin-top: 150px;
+    &::before{
+        content: "";
+        clip-path: polygon(50% 52%, 0% 100%, 100% 100%);
+        background: $primery-color;
+        position: absolute;
+        top: -145px;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        z-index: 9999;
+    }
+    .img{
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    p{
+        color: $white;
+        font-size: 12px;
+    }
+    a{
+        color: $white;
+        font-size: 12px;
+        margin-bottom: 10px;
+        display: block;
+        @extend .trns;
+        &:hover{
+            color: $secondery-color;
+        }
+    }
+    h3{
+        a{
+           font-size: 16px !important;
+           margin-bottom: 40px;
+        }
+        &:last-child a{
+            margin-bottom: 0;
+        }
+    }
+    .social{
+        h3{
+            padding-left: 30px;
+            position: relative;
+            a{
+                span{
+                    color: $white;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 16px;
+                    @extend .trns;
+                }
+                &:hover span{
+                    color: $secondery-color;
+                }
+            }
+            
+        }
+
+    }
+    form{
+        input{
+            border: 2px solid $secondery-color;
+            background: transparent;
+            outline: none;
+            color: $white;
+        }
+        button{
+            background: $secondery-color;
+            color: $primery-color;
+            font-weight: 700;
+            margin-left: -5px;
+        }
+    }
+}
+
+.back-top{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    cursor: pointer;
+}
+.back-top i{
+    width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1rem;
+  color: $primery-color;
+  background: $secondery-color;
+  border-radius: 50%;
+}

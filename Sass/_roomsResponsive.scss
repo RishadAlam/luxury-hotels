@@ -1,0 +1,52 @@
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    #rooms {
+        .container{
+             .item{ 
+                 .dtl {
+                    padding: 80px 80px;
+                 }
+             }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 767.98px) { 
+    #rooms {
+        .container{
+             .item{ 
+                 .dtl {
+                    padding: 80px 10px;
+                 }
+             }
+        }
+    }
+
+}
+
+ // Small devices (landscape phones, 576px and up)
+ @media (max-width: 576px) { 
+    #rooms {
+        .container{
+             .item{ 
+                 .dtl {
+                    p{
+                        font-size: 14px;
+
+                        span{
+                            padding-right: 5px;
+                        }
+                    }
+                    padding: 45px 10px !important;
+                 }
+                 
+             }
+             .rooms-slider{
+                 div{
+                    height: 250px !important;
+                 }
+            }
+        }
+    }
+ }
